@@ -10,11 +10,9 @@ namespace RPS
     {
         static void Main(string[] args)
         {
-            Intro gameStart = new Intro();
-            PlayGame names = new PlayGame();
-            gameStart.RunIntro();
-            names.GetPlayers();
-            names.MakeChoice();
+            Game gamestart = new Game();
+            gamestart.StartGame();
+
         }
     }
 }

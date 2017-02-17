@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace RPS
 {
-    class PlayGame
+    class PlayGame : Program
     {
         Player player = new Player();
         Player opponent = new Player();
+        Game startgame = new Game();
 
         public string numberofPlayers;
         public string OpponentSelection;
@@ -60,6 +61,7 @@ namespace RPS
             {
                 Console.WriteLine($"{player.opponentName}, choose 'rock' 'paper' 'scissors' 'spock' or 'lizard'");
                 OpponentSelection = Console.ReadLine();
+                OpponentSelection = OpponentSelection.ToLower();
                 if (OpponentSelection != "rock" && OpponentSelection != "paper" && OpponentSelection != "scissors" && OpponentSelection != "spock" && OpponentSelection != "lizard")
                 {
                     Console.WriteLine("Invalid selection");
@@ -75,11 +77,12 @@ namespace RPS
 
         public void MakeChoice()
         {
-            while (player.playerScore < 2 && player.opponentScore < 2)
+            if (player.playerScore < 2 && player.opponentScore < 2)
             {
                 ComputerChoice();
                 Console.WriteLine($"{player.player1Name}, choose 'rock' 'paper' 'scissors' 'spock' or 'lizard'");
                 string playerChoice = Console.ReadLine();
+                playerChoice = playerChoice.ToLower();
 
 
 
@@ -89,12 +92,22 @@ namespace RPS
                         {
                             if (OpponentSelection == "rock")
                             {
+                                if(numberofPlayers == "1")
+                                {
+                                    Console.WriteLine($"{player.opponentName} chose {OpponentSelection}");
+
+                                }
                                 Console.WriteLine($"{player.player1Name} tied {player.opponentName}. No score");
                                 MakeChoice();
                             }
 
                             if (OpponentSelection == "paper")
                             {
+                                if (numberofPlayers == "1")
+                                {
+                                    Console.WriteLine($"{player.opponentName} chose {OpponentSelection}");
+
+                                }
                                 Console.WriteLine($"{player.player1Name} lost. {player.opponentName} scored a point.");
                                 player.opponentScore += 1;
                                 MakeChoice();
@@ -102,6 +115,11 @@ namespace RPS
                             }
                             if (OpponentSelection == "scissors")
                             {
+                                if (numberofPlayers == "1")
+                                {
+                                    Console.WriteLine($"{player.opponentName} chose {OpponentSelection}");
+
+                                }
                                 Console.WriteLine($"{player.player1Name} won and scored a point.");
                                 player.playerScore += 1;
                                 MakeChoice();
@@ -109,6 +127,11 @@ namespace RPS
                             }
                             if (OpponentSelection == "spock")
                             {
+                                if (numberofPlayers == "1")
+                                {
+                                    Console.WriteLine($"{player.opponentName} chose {OpponentSelection}");
+
+                                }
                                 Console.WriteLine($"{player.player1Name} lost. {player.opponentName} scored a point.");
                                 player.opponentScore += 1;
                                 MakeChoice();
@@ -116,6 +139,11 @@ namespace RPS
                             }
                             if (OpponentSelection == "lizard")
                             {
+                                if (numberofPlayers == "1")
+                                {
+                                    Console.WriteLine($"{player.opponentName} chose {OpponentSelection}");
+
+                                }
                                 Console.WriteLine($"{player.player1Name} won and scored a point.");
                                 player.playerScore += 1;
                                 MakeChoice();
@@ -127,6 +155,11 @@ namespace RPS
                         {
                             if (OpponentSelection == "scissors")
                             {
+                                if (numberofPlayers == "1")
+                                {
+                                    Console.WriteLine($"{player.opponentName} chose {OpponentSelection}");
+
+                                }
                                 Console.WriteLine($"{player.player1Name} lost. {player.opponentName} scored a point.");
                                 player.opponentScore += 1;
                                 MakeChoice();
@@ -135,12 +168,22 @@ namespace RPS
 
                             if (OpponentSelection == "paper")
                             {
+                                if (numberofPlayers == "1")
+                                {
+                                    Console.WriteLine($"{player.opponentName} chose {OpponentSelection}");
+
+                                }
                                 Console.WriteLine($"{player.player1Name} tied {player.opponentName}. No score");
                                 MakeChoice();
 
                             }
                             if (OpponentSelection == "rock")
                             {
+                                if (numberofPlayers == "1")
+                                {
+                                    Console.WriteLine($"{player.opponentName} chose {OpponentSelection}");
+
+                                }
                                 Console.WriteLine($"{player.player1Name} won and scored a point.");
                                 player.playerScore += 1;
                                 MakeChoice();
@@ -149,6 +192,11 @@ namespace RPS
 
                             if (OpponentSelection == "spock")
                             {
+                                if (numberofPlayers == "1")
+                                {
+                                    Console.WriteLine($"{player.opponentName} chose {OpponentSelection}");
+
+                                }
                                 Console.WriteLine($"{player.player1Name} won and scored a point.");
                                 player.playerScore += 1;
                                 MakeChoice();
@@ -156,6 +204,11 @@ namespace RPS
                             }
                             if (OpponentSelection == "lizard")
                             {
+                                if (numberofPlayers == "1")
+                                {
+                                    Console.WriteLine($"{player.opponentName} chose {OpponentSelection}");
+
+                                }
                                 Console.WriteLine($"{player.player1Name} lost. {player.opponentName} scored a point.");
                                 player.opponentScore += 1;
                                 MakeChoice();
@@ -167,6 +220,11 @@ namespace RPS
                         {
                             if (OpponentSelection == "rock")
                             {
+                                if (numberofPlayers == "1")
+                                {
+                                    Console.WriteLine($"{player.opponentName} chose {OpponentSelection}");
+
+                                }
                                 Console.WriteLine($"{player.player1Name} lost. {player.opponentName} scored a point.");
                                 player.opponentScore += 1;
                                 MakeChoice();
@@ -175,6 +233,11 @@ namespace RPS
 
                             if (OpponentSelection == "paper")
                             {
+                                if (numberofPlayers == "1")
+                                {
+                                    Console.WriteLine($"{player.opponentName} chose {OpponentSelection}");
+
+                                }
                                 Console.WriteLine($"{player.player1Name} won and scored a point.");
                                 player.playerScore += 1;
                                 MakeChoice();
@@ -182,6 +245,11 @@ namespace RPS
                             }
                             if (OpponentSelection == "scissors")
                             {
+                                if (numberofPlayers == "1")
+                                {
+                                    Console.WriteLine($"{player.opponentName} chose {OpponentSelection}");
+
+                                }
                                 Console.WriteLine($"{player.player1Name} tied {player.opponentName}. No score.");
                                 MakeChoice();
 
@@ -189,6 +257,11 @@ namespace RPS
 
                             if (OpponentSelection == "spock")
                             {
+                                if (numberofPlayers == "1")
+                                {
+                                    Console.WriteLine($"{player.opponentName} chose {OpponentSelection}");
+
+                                }
                                 Console.WriteLine($"{player.player1Name} lost. {player.opponentName} scored a point.");
                                 player.opponentScore += 1;
                                 MakeChoice();
@@ -196,6 +269,11 @@ namespace RPS
                             }
                             if (OpponentSelection == "lizard")
                             {
+                                if (numberofPlayers == "1")
+                                {
+                                    Console.WriteLine($"{player.opponentName} chose {OpponentSelection}");
+
+                                }
                                 Console.WriteLine($"{player.player1Name} won and scored a point.");
                                 player.playerScore += 1;
                                 MakeChoice();
@@ -208,6 +286,11 @@ namespace RPS
                         {
                             if (OpponentSelection == "rock")
                             {
+                                if (numberofPlayers == "1")
+                                {
+                                    Console.WriteLine($"{player.opponentName} chose {OpponentSelection}");
+
+                                }
                                 Console.WriteLine($"{player.player1Name} won and scored a point.");
                                 player.playerScore += 1;
                                 MakeChoice();
@@ -216,21 +299,36 @@ namespace RPS
 
                             if (OpponentSelection == "paper")
                             {
+                                if (numberofPlayers == "1")
+                                {
+                                    Console.WriteLine($"{player.opponentName} chose {OpponentSelection}");
+
+                                }
                                 Console.WriteLine($"{player.player1Name} lost. {player.opponentName} scored a point.");
                                 player.opponentScore += 1;
                                 MakeChoice();
 
                             }
-                            if (OpponentSelection == "scissors")
+                            if (OpponentSelection == "spock")
                             {
+                                if (numberofPlayers == "1")
+                                {
+                                    Console.WriteLine($"{player.opponentName} chose {OpponentSelection}");
+
+                                }
                                 Console.WriteLine($"{player.player1Name} won and scored a point.");
                                 player.playerScore += 1;
                                 MakeChoice();
 
                             }
 
-                            if (OpponentSelection == "spock")
+                            if (OpponentSelection == "lizard")
                             {
+                                if (numberofPlayers == "1")
+                                {
+                                    Console.WriteLine($"{player.opponentName} chose {OpponentSelection}");
+
+                                }
                                 Console.WriteLine($"{player.player1Name} lost. {player.opponentName} scored a point.");
                                 player.opponentScore += 1;
                                 MakeChoice();
@@ -238,6 +336,11 @@ namespace RPS
                             }
                             if (OpponentSelection == "lizard")
                             {
+                                if (numberofPlayers == "1")
+                                {
+                                    Console.WriteLine($"{player.opponentName} chose {OpponentSelection}");
+
+                                }
                                 Console.WriteLine($"{player.player1Name} tied {player.opponentName}. No score.");
                                 MakeChoice();
 
@@ -248,6 +351,11 @@ namespace RPS
                         {
                             if (OpponentSelection == "rock")
                             {
+                                if (numberofPlayers == "1")
+                                {
+                                    Console.WriteLine($"{player.opponentName} chose {OpponentSelection}");
+
+                                }
                                 Console.WriteLine($"{player.player1Name} won. You scored a point.");
                                 player.playerScore += 1;
                                 MakeChoice();
@@ -256,6 +364,11 @@ namespace RPS
 
                             if (OpponentSelection == "paper")
                             {
+                                if (numberofPlayers == "1")
+                                {
+                                    Console.WriteLine($"{player.opponentName} chose {OpponentSelection}");
+
+                                }
                                 Console.WriteLine($"{player.player1Name} lost. {player.opponentName} scored a point.");
                                 player.opponentScore += 1;
                                 MakeChoice();
@@ -263,6 +376,11 @@ namespace RPS
                             }
                             if (OpponentSelection == "scissors")
                             {
+                                if (numberofPlayers == "1")
+                                {
+                                    Console.WriteLine($"{player.opponentName} chose {OpponentSelection}");
+
+                                }
                                 Console.WriteLine($"{player.player1Name} won and scored a point.");
                                 player.playerScore += 1;
                                 MakeChoice();
@@ -271,12 +389,22 @@ namespace RPS
 
                             if (OpponentSelection == "spock")
                             {
+                                if (numberofPlayers == "1")
+                                {
+                                    Console.WriteLine($"{player.opponentName} chose {OpponentSelection}");
+
+                                }
                                 Console.WriteLine($"{player.player1Name} tied {player.opponentName}. No score.");
                                 MakeChoice();
 
                             }
                             if (OpponentSelection == "lizard")
                             {
+                                if (numberofPlayers == "1")
+                                {
+                                    Console.WriteLine($"{player.opponentName} chose {OpponentSelection}");
+
+                                }
                                 Console.WriteLine($"{player.player1Name} lost. {player.opponentName} scored a point.");
                                 player.opponentScore += 1;
                                 MakeChoice();
@@ -292,18 +420,40 @@ namespace RPS
                 }
 
             }
-
-        }
-        public void EndGame()
-        {
-            if (playerScore = 2)
+            
+            else if (player.playerScore > 1)
             {
+                Console.WriteLine($"Congratulations {player.player1Name} you dominated {player.opponentName}. Enter 'restart' to play again or anything else to end the game");
+                string EndChoice = Console.ReadLine();
+                EndChoice = EndChoice.ToLower();
+                switch (EndChoice)
+                {
+                    case "restart":
+                        startgame.StartGame();
+                        break;
+                    default:
+                        Environment.Exit(0);
+                        break;
 
+                        }
             }
 
-            
+            else
+            {
+                Console.WriteLine($"Congratulations {player.opponentName} you dominated {player.player1Name}. Type 'restart' to play again or anything else to end the game");
+                string EndChoice = Console.ReadLine();
+                EndChoice = EndChoice.ToLower();
+                switch (EndChoice)
+                {
+                    case "restart":
+                        startgame.StartGame();
+                        break;
+                    default:
+                        Environment.Exit(0);
+                        break;
 
-
+                }
+            }
 
         }
 
