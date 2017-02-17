@@ -1,0 +1,6 @@
+c:\users\mark\documents\visual studio 2015\Projects\RPS\RPS\bin\Debug\RPS.exe.config
+C:\Users\Mark\Documents\Visual Studio 2015\Projects\RPS\RPS\obj\Debug\RPS.csprojResolveAssemblyReference.cache
+C:\Users\Mark\Documents\Visual Studio 2015\Projects\RPS\RPS\bin\Debug\RPS.exe
+C:\Users\Mark\Documents\Visual Studio 2015\Projects\RPS\RPS\bin\Debug\RPS.pdb
+C:\Users\Mark\Documents\Visual Studio 2015\Projects\RPS\RPS\obj\Debug\RPS.exe
+C:\Users\Mark\Documents\Visual Studio 2015\Projects\RPS\RPS\obj\Debug\RPS.pdb
