@@ -440,7 +440,7 @@ namespace RPS
 
             else
             {
-                Console.WriteLine($"Congratulations {player.opponentName} you dominated {player.player1Name}. Type 'restart' to play again or anything else to end the game");
+                Console.WriteLine($"{player.opponentName} dominated {player.player1Name}. Type 'restart' to play again or anything else to end the game");
                 string EndChoice = Console.ReadLine();
                 EndChoice = EndChoice.ToLower();
                 switch (EndChoice)
